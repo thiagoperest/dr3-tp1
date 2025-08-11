@@ -27,4 +27,25 @@ public class ScientificCalculatorTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    @DisplayName("Deve subtrair dois números corretamente")
+    void testSubtract() {
+        // Setup
+        // Prepara os dados de entrada e resultado esperado
+        double a = 10.0;
+        double b = 4.0;
+        double expectedResult = 6.0;
+
+        // Execution
+        // Executa o método que está sendo testado
+        double actualResult = calculator.subtract(a, b);
+
+        // Assertion
+        // Verifica se o resultado está correto
+        assertEquals(expectedResult, actualResult);
+
+        // Teardown
+        // Neste teste, não há recursos externos para limpar
+    }
+
 }
