@@ -48,4 +48,16 @@ public class ScientificCalculatorTest {
         // Neste teste, não há recursos externos para limpar
     }
 
+    @Test
+    @DisplayName("Deve multiplicar dois números corretamente")
+    void testMultiply() {
+        double a = 6.0;
+        double b = 7.0;
+        double expectedResult = 42.0;
+
+        double actualResult = calculator.multiply(a, b);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
 }
