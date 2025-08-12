@@ -96,4 +96,26 @@ public class ScientificCalculatorTest {
         assertEquals("Division by zero", exception.getMessage());
     }
 
+    @Test
+    @DisplayName("Deve calcular logaritmo de números positivos")
+    void testLog() {
+        double value = Math.E;
+        double expectedResult = 1.0;
+
+        double actualResult = calculator.log(value);
+
+        assertEquals(expectedResult, actualResult, 0.001);
+    }
+
+    @Test
+    @DisplayName("Deve calcular seno de ângulos em graus")
+    void testSin() {
+        double degrees = 30.0;
+        double expectedResult = 0.5;
+
+        double actualResult = calculator.sin(degrees);
+
+        assertEquals(expectedResult, actualResult, 0.001);
+    }
+
 }
