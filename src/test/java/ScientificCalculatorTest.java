@@ -71,4 +71,16 @@ public class ScientificCalculatorTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    @DisplayName("Deve lançar exceção ao calcular raiz quadrada de número negativo")
+    void testSquareRootNegative() {
+        double negativeNumber = -30.0;
+
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculator.squareRoot(negativeNumber);
+        });
+
+        assertEquals("Negative number", exception.getMessage());
+    }
+
 }
