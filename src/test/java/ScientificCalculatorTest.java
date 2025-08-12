@@ -83,4 +83,17 @@ public class ScientificCalculatorTest {
         assertEquals("Negative number", exception.getMessage());
     }
 
+    @Test
+    @DisplayName("Deve lançar exceção ao dividir por zero")
+    void testDivideByZero() {
+        double dividend = 10.0;
+        double divisor = 0.0;
+
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            calculator.divide(dividend, divisor);
+        });
+
+        assertEquals("Division by zero", exception.getMessage());
+    }
+
 }
