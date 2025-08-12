@@ -60,4 +60,15 @@ public class ScientificCalculatorTest {
         assertEquals(expectedResult, actualResult);
     }
 
+    @Test
+    @DisplayName("Deve calcular a raiz quadrada de um número positivo")
+    void testSquareRootPositive() {
+        double a = 25.0;
+        double expectedResult = 5.0;
+
+        double actualResult = calculator.squareRoot(a);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
 }
